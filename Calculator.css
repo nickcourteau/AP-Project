@@ -1,0 +1,64 @@
+html {
+    font-family: Open Sans, sans-serif;
+    text-align: center;
+}
+
+button {
+    width: 7.5%;
+    height: 50px;
+    text-decoration: none;
+    border: 2px solid #e7e7e7;
+    border-width: 1px;
+    font-size: 20px;
+    background-color: #e7e7e7;
+    cursor: pointer;
+}
+
+.headerButton {
+    width : 9.5%;
+    height: 50px;
+    text-decoration: none;
+    border-color: 2px solid #e7e7e7;
+    border-width: 1px;
+    font-size: 20px;
+    background-color: white;
+}
+
+.selectedButton {
+    width : 9.5%;
+    height: 50px;
+    text-decoration: none;
+    border-color: 2px solid #e7e7e7;
+    border-width: 1px;
+    font-size: 20px;
+    background-color: gray;
+}
+
+.whiteButton {
+    background-color: white;
+}
+
+.redButton {
+    background-color: red;
+}
+
+.disabledButton {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.binary {
+
+}
+
+.octal {
+
+}
+
+.decimal {
+
+}
+
+.hex {
+
+}

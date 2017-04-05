@@ -9,56 +9,57 @@
     <link rel="stylesheet" href="Calculator.css"> </head>
 
 <body>
+    <script>setDecimal()</script>
     <h1 id="header">Calculator App</h1>
     <form>
         <p>
             <input type="text" id="screen" maxlength="10">
         </p>
         <p>
-            <button class="headerButton" id="" type="button" onclick="setBinary()">Binary</button>
-            <button class="headerButton" id="" type="button" onclick="setOctal()">Octal</button>
-            <button class="headerButton" id="" type="button" onclick="setDecimal()">Decimal</button>
-            <button class="headerButton" id="" type="button" onclick="setHex()">Hex</button>
+            <button class="headerButton" id="binary" type="button" onclick="setBinary()">Binary</button>
+            <button class="headerButton" id="octal" type="button" onclick="setOctal()">Octal</button>
+            <button class="headerButton" id="hex" type="button" onclick="setDecimal()">Decimal</button>
+            <button class="headerButton" id="decimal" type="button" onclick="setHex()">Hex</button>
         </p>
         <p>
             <button type="button" onclick="allClear()">AC</button>
-            <button class="whiteButton hex" type="button" onclick="addDigit('d')">d</button>
-            <button class="whiteButton hex" type="button" onclick="addDigit('e')">e</button>
-            <button class="whiteButton hex" type="button" onclick="addDigit('f')">f</button>
+            <button class="whiteButton" id="d" type="button" onclick="addDigit('d')">d</button>
+            <button class="whiteButton" id="e" type="button" onclick="addDigit('e')">e</button>
+            <button class="whiteButton" id="f" type="button" onclick="addDigit('f')">f</button>
             <button type="button" onclick="percentage()">%</button>
         </p>
         <p>
             <button type="button" onclick="clearCurrent()">C</button>
-            <button class="whiteButton hex" type="button" onclick="addDigit('a')">a</button>
-            <button class="whiteButton hex" type="button" onclick="addDigit('b')">b</button>
-            <button class="whiteButton hex" type="button" onclick="addDigit('c')">c</button>
+            <button class="whiteButton" id="a" type="button" onclick="addDigit('a')">a</button>
+            <button class="whiteButton" id="b" type="button" onclick="addDigit('b')">b</button>
+            <button class="whiteButton" id="c" type="button" onclick="addDigit('c')">c</button>
             <button type="button" onclick="storeOperator('/')">/</button>
         </p>
         <p>
             <button type="button" onclick="inverse()">1/x</button>
-            <button class="whiteButton octal" type="button" onclick="addDigit('7')">7</button>
-            <button class="whiteButton decimal" type="button" onclick="addDigit('8')">8</button>
-            <button class="whiteButton decimal" type="button" onclick="addDigit('9')">9</button>
+            <button class="whiteButton" id="7" type="button" onclick="addDigit('7')">7</button>
+            <button class="whiteButton" id="8" type="button" onclick="addDigit('8')">8</button>
+            <button class="whiteButton" id="9" type="button" onclick="addDigit('9')">9</button>
             <button type="button" onclick="storeOperator('*')">*</button>
         </p>
         <p>
             <button type="button" onclick="square()">x<sup>2</sup></button>
-            <button class="whiteButton octal" type="button" onclick="addDigit('4')">4</button>
-            <button class="whiteButton octal" type="button" onclick="addDigit('5')">5</button>
-            <button class="whiteButton octal" type="button" onclick="addDigit('6')">6</button>
+            <button class="whiteButton" id="4" type="button" onclick="addDigit('4')">4</button>
+            <button class="whiteButton" id="5" type="button" onclick="addDigit('5')">5</button>
+            <button class="whiteButton" id="6" type="button" onclick="addDigit('6')">6</button>
             <button type="button" onclick="storeOperator('-')">-</button>
         </p>
         <p>
             <button type="button" onclick="factorial()">x!</button>
-            <button class="whiteButton binary" type="button" onclick="addDigit('1')">1</button>
-            <button class="whiteButton octal" type="button" onclick="addDigit('2')">2</button>
-            <button class="whiteButton octal" type="button" onclick="addDigit('3')">3</button>
+            <button class="whiteButton" id="1" type="button" onclick="addDigit('1')">1</button>
+            <button class="whiteButton" id="2" type="button" onclick="addDigit('2')">2</button>
+            <button class="whiteButton" id="3" type="button" onclick="addDigit('3')">3</button>
             <button type="button" onclick="storeOperator('+')">+</button>
         </p>
         <p>
             <button type="button" onclick="squareRoot()">&radic;x</button>
             <button type="button" onclick="addDecimal()">.</button>
-            <button class="whiteButton binary" type="button" onclick="addDigit('0')">0</button>
+            <button class="whiteButton" id="0" type="button" onclick="addDigit('0')">0</button>
             <button type="button" onclick="changeSign()">+/-</button>
             <button type="button" onclick="calculate()">=</button>
         </p>

@@ -43,22 +43,6 @@ button {
 }
 
 .disabledButton {
-    opacity: 0.6;
+    opacity: 0.2;
     cursor: not-allowed;
-}
-
-.binary {
-
-}
-
-.octal {
-
-}
-
-.decimal {
-
-}
-
-.hex {
-
 }

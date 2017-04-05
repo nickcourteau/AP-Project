@@ -3,19 +3,80 @@ var memory = "0";
 var operator = 0;
 
 function setBinary() {
-
+    document.getElementById("0").classList.remove("disabledButton");
+    document.getElementById("1").classList.remove("disabledButton");
+    document.getElementById("2").classList.add("disabledButton");
+    document.getElementById("3").classList.add("disabledButton");
+    document.getElementById("4").classList.add("disabledButton");
+    document.getElementById("5").classList.add("disabledButton");
+    document.getElementById("6").classList.add("disabledButton");
+    document.getElementById("7").classList.add("disabledButton");
+    document.getElementById("8").classList.add("disabledButton");
+    document.getElementById("9").classList.add("disabledButton");
+    document.getElementById("a").classList.add("disabledButton");
+    document.getElementById("b").classList.add("disabledButton");
+    document.getElementById("c").classList.add("disabledButton");
+    document.getElementById("d").classList.add("disabledButton");
+    document.getElementById("e").classList.add("disabledButton");
+    document.getElementById("f").classList.add("disabledButton");
 }
 
 function setOctal() {
-
+    document.getElementById("0").classList.remove("disabledButton");
+    document.getElementById("1").classList.remove("disabledButton");
+    document.getElementById("2").classList.remove("disabledButton");
+    document.getElementById("3").classList.remove("disabledButton");
+    document.getElementById("4").classList.remove("disabledButton");
+    document.getElementById("5").classList.remove("disabledButton");
+    document.getElementById("6").classList.remove("disabledButton");
+    document.getElementById("7").classList.remove("disabledButton");
+    document.getElementById("8").classList.add("disabledButton");
+    document.getElementById("9").classList.add("disabledButton");
+    document.getElementById("a").classList.add("disabledButton");
+    document.getElementById("b").classList.add("disabledButton");
+    document.getElementById("c").classList.add("disabledButton");
+    document.getElementById("d").classList.add("disabledButton");
+    document.getElementById("e").classList.add("disabledButton");
+    document.getElementById("f").classList.add("disabledButton");
 }
 
 function setDecimal() {
-    document.getElementById("hex").className = "disabledButton";
+    document.getElementById("0").classList.remove("disabledButton");
+    document.getElementById("1").classList.remove("disabledButton");
+    document.getElementById("2").classList.remove("disabledButton");
+    document.getElementById("3").classList.remove("disabledButton");
+    document.getElementById("4").classList.remove("disabledButton");
+    document.getElementById("5").classList.remove("disabledButton");
+    document.getElementById("6").classList.remove("disabledButton");
+    document.getElementById("7").classList.remove("disabledButton");
+    document.getElementById("8").classList.remove("disabledButton");
+    document.getElementById("9").classList.remove("disabledButton");
+    document.getElementById("a").classList.add("disabledButton");
+    document.getElementById("b").classList.add("disabledButton");
+    document.getElementById("c").classList.add("disabledButton");
+    document.getElementById("d").classList.add("disabledButton");
+    document.getElementById("e").classList.add("disabledButton");
+    document.getElementById("f").classList.add("disabledButton");
+
 }
 
 function setHex() {
-
+    document.getElementById("0").classList.remove("disabledButton");
+    document.getElementById("1").classList.remove("disabledButton");
+    document.getElementById("2").classList.remove("disabledButton");
+    document.getElementById("3").classList.remove("disabledButton");
+    document.getElementById("4").classList.remove("disabledButton");
+    document.getElementById("5").classList.remove("disabledButton");
+    document.getElementById("6").classList.remove("disabledButton");
+    document.getElementById("7").classList.remove("disabledButton");
+    document.getElementById("8").classList.remove("disabledButton");
+    document.getElementById("9").classList.remove("disabledButton");
+    document.getElementById("a").classList.remove("disabledButton");
+    document.getElementById("b").classList.remove("disabledButton");
+    document.getElementById("c").classList.remove("disabledButton");
+    document.getElementById("d").classList.remove("disabledButton");
+    document.getElementById("e").classList.remove("disabledButton");
+    document.getElementById("f").classList.remove("disabledButton");
 }
 
 function displayCurrentInput() {

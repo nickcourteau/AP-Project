@@ -1,82 +1,108 @@
+//calc = 1: binary, calc = 2: octal, calc = 3: decimal, calc = 4: hexadecimal
 var current_input = "0";
 var memory = "0";
 var operator = 0;
+var calc = 0;
 
 function setBinary() {
-    document.getElementById("0").classList.remove("disabledButton");
-    document.getElementById("1").classList.remove("disabledButton");
-    document.getElementById("2").classList.add("disabledButton");
-    document.getElementById("3").classList.add("disabledButton");
-    document.getElementById("4").classList.add("disabledButton");
-    document.getElementById("5").classList.add("disabledButton");
-    document.getElementById("6").classList.add("disabledButton");
-    document.getElementById("7").classList.add("disabledButton");
-    document.getElementById("8").classList.add("disabledButton");
-    document.getElementById("9").classList.add("disabledButton");
-    document.getElementById("a").classList.add("disabledButton");
-    document.getElementById("b").classList.add("disabledButton");
-    document.getElementById("c").classList.add("disabledButton");
-    document.getElementById("d").classList.add("disabledButton");
-    document.getElementById("e").classList.add("disabledButton");
-    document.getElementById("f").classList.add("disabledButton");
+    document.getElementById("0").disabled = false;
+    document.getElementById("1").disabled = false;
+    document.getElementById("2").disabled = true;
+    document.getElementById("3").disabled = true;
+    document.getElementById("4").disabled = true;
+    document.getElementById("5").disabled = true;
+    document.getElementById("6").disabled = true;
+    document.getElementById("7").disabled = true;
+    document.getElementById("8").disabled = true;
+    document.getElementById("9").disabled = true;
+    document.getElementById("a").disabled = true;
+    document.getElementById("b").disabled = true;
+    document.getElementById("c").disabled = true;
+    document.getElementById("d").disabled = true;
+    document.getElementById("e").disabled = true;
+    document.getElementById("f").disabled = true;
+    document.getElementById("%").disabled = true;
+    document.getElementById("/").disabled = true;
+    document.getElementById(".").disabled = true;
+    document.getElementById("1/x").disabled = true;
+    document.getElementById("sqrt").disabled = true;
+    calc = 1;
+
 }
 
 function setOctal() {
-    document.getElementById("0").classList.remove("disabledButton");
-    document.getElementById("1").classList.remove("disabledButton");
-    document.getElementById("2").classList.remove("disabledButton");
-    document.getElementById("3").classList.remove("disabledButton");
-    document.getElementById("4").classList.remove("disabledButton");
-    document.getElementById("5").classList.remove("disabledButton");
-    document.getElementById("6").classList.remove("disabledButton");
-    document.getElementById("7").classList.remove("disabledButton");
-    document.getElementById("8").classList.add("disabledButton");
-    document.getElementById("9").classList.add("disabledButton");
-    document.getElementById("a").classList.add("disabledButton");
-    document.getElementById("b").classList.add("disabledButton");
-    document.getElementById("c").classList.add("disabledButton");
-    document.getElementById("d").classList.add("disabledButton");
-    document.getElementById("e").classList.add("disabledButton");
-    document.getElementById("f").classList.add("disabledButton");
+    document.getElementById("0").disabled = false;
+    document.getElementById("1").disabled = false;
+    document.getElementById("2").disabled = false;
+    document.getElementById("3").disabled = false;
+    document.getElementById("4").disabled = false;
+    document.getElementById("5").disabled = false;
+    document.getElementById("6").disabled = false;
+    document.getElementById("7").disabled = false;
+    document.getElementById("8").disabled = true;
+    document.getElementById("9").disabled = true;
+    document.getElementById("a").disabled = true;
+    document.getElementById("b").disabled = true;
+    document.getElementById("c").disabled = true;
+    document.getElementById("d").disabled = true;
+    document.getElementById("e").disabled = true;
+    document.getElementById("f").disabled = true;
+    document.getElementById("%").disabled = true;
+    document.getElementById("/").disabled = true;
+    document.getElementById(".").disabled = true;
+    document.getElementById("1/x").disabled = true;
+    document.getElementById("sqrt").disabled = true;
+    calc = 2;
 }
 
 function setDecimal() {
-    document.getElementById("0").classList.remove("disabledButton");
-    document.getElementById("1").classList.remove("disabledButton");
-    document.getElementById("2").classList.remove("disabledButton");
-    document.getElementById("3").classList.remove("disabledButton");
-    document.getElementById("4").classList.remove("disabledButton");
-    document.getElementById("5").classList.remove("disabledButton");
-    document.getElementById("6").classList.remove("disabledButton");
-    document.getElementById("7").classList.remove("disabledButton");
-    document.getElementById("8").classList.remove("disabledButton");
-    document.getElementById("9").classList.remove("disabledButton");
-    document.getElementById("a").classList.add("disabledButton");
-    document.getElementById("b").classList.add("disabledButton");
-    document.getElementById("c").classList.add("disabledButton");
-    document.getElementById("d").classList.add("disabledButton");
-    document.getElementById("e").classList.add("disabledButton");
-    document.getElementById("f").classList.add("disabledButton");
-
+    document.getElementById("0").disabled = false;
+    document.getElementById("1").disabled = false;
+    document.getElementById("2").disabled = false;
+    document.getElementById("3").disabled = false;
+    document.getElementById("4").disabled = false;
+    document.getElementById("5").disabled = false;
+    document.getElementById("6").disabled = false;
+    document.getElementById("7").disabled = false;
+    document.getElementById("8").disabled = false;
+    document.getElementById("9").disabled = false;
+    document.getElementById("%").disabled = false;
+    document.getElementById("/").disabled = false;
+    document.getElementById(".").disabled = false;
+    document.getElementById("1/x").disabled = false;
+    document.getElementById("sqrt").disabled = false;
+    document.getElementById("a").disabled = true;
+    document.getElementById("b").disabled = true;
+    document.getElementById("c").disabled = true;
+    document.getElementById("d").disabled = true;
+    document.getElementById("e").disabled = true;
+    document.getElementById("f").disabled = true;
+    calc = 3;
 }
 
 function setHex() {
-    document.getElementById("0").classList.remove("disabledButton");
-    document.getElementById("1").classList.remove("disabledButton");
-    document.getElementById("2").classList.remove("disabledButton");
-    document.getElementById("3").classList.remove("disabledButton");
-    document.getElementById("4").classList.remove("disabledButton");
-    document.getElementById("5").classList.remove("disabledButton");
-    document.getElementById("6").classList.remove("disabledButton");
-    document.getElementById("7").classList.remove("disabledButton");
-    document.getElementById("8").classList.remove("disabledButton");
-    document.getElementById("9").classList.remove("disabledButton");
-    document.getElementById("a").classList.remove("disabledButton");
-    document.getElementById("b").classList.remove("disabledButton");
-    document.getElementById("c").classList.remove("disabledButton");
-    document.getElementById("d").classList.remove("disabledButton");
-    document.getElementById("e").classList.remove("disabledButton");
-    document.getElementById("f").classList.remove("disabledButton");
+    document.getElementById("0").disabled = false;
+    document.getElementById("1").disabled = false;
+    document.getElementById("2").disabled = false;
+    document.getElementById("3").disabled = false;
+    document.getElementById("4").disabled = false;
+    document.getElementById("5").disabled = false;
+    document.getElementById("6").disabled = false;
+    document.getElementById("7").disabled = false;
+    document.getElementById("8").disabled = false;
+    document.getElementById("9").disabled = false;
+    document.getElementById("a").disabled = false;
+    document.getElementById("b").disabled = false;
+    document.getElementById("c").disabled = false;
+    document.getElementById("d").disabled = false;
+    document.getElementById("e").disabled = false;
+    document.getElementById("f").disabled = false;
+    document.getElementById("%").disabled = true;
+    document.getElementById("/").disabled = true;
+    document.getElementById(".").disabled = true;
+    document.getElementById("1/x").disabled = true;
+    document.getElementById("sqrt").disabled = true;
+    calc = 4;
 }
 
 function displayCurrentInput() {

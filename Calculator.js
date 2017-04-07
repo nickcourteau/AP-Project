@@ -26,7 +26,7 @@ function setBinary() {
     document.getElementById("e").disabled = true;
     document.getElementById("f").disabled = true;
     document.getElementById("%").disabled = true;
-    document.getElementById(".").disabled = false;
+    document.getElementById(".").disabled = true;
     document.getElementById("1/x").disabled = false;
     document.getElementById("sqrt").disabled = false;
     calc = 1;
@@ -249,19 +249,6 @@ function clearCurrent() {
 
 function percentage() {
     current_input = current_input / 100;
-    displayCurrentInput();
-}
-
-function factorial() {
-    if (current_input == 0) {
-        current_input = 1;
-    }
-    if (current_input < 0) {
-        current_input = "ERROR: Input must be >0";
-    }
-    for (var i = current_input; --i; ) {
-        current_input = current_input * i;
-    }
     displayCurrentInput();
 }
 

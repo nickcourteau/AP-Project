@@ -1,4 +1,4 @@
-//calc = 1: binary, calc = 2: octal, calc = 3: decimal, calc = 4: hexadecimal
+//calc = 1: binary, calc = 2: octal, calc = 3: decimal
 var current_input = "0";
 var memory = "0";
 var operator = 0;
@@ -8,7 +8,6 @@ function setBinary() {
     document.getElementById("binary").classList.add("selectedButton");
     document.getElementById("octal").classList.remove("selectedButton");
     document.getElementById("decimal").classList.remove("selectedButton");
-    document.getElementById("hex").classList.remove("selectedButton");
     document.getElementById("0").disabled = false;
     document.getElementById("1").disabled = false;
     document.getElementById("2").disabled = true;
@@ -19,16 +18,11 @@ function setBinary() {
     document.getElementById("7").disabled = true;
     document.getElementById("8").disabled = true;
     document.getElementById("9").disabled = true;
-    document.getElementById("a").disabled = true;
-    document.getElementById("b").disabled = true;
-    document.getElementById("c").disabled = true;
-    document.getElementById("d").disabled = true;
-    document.getElementById("e").disabled = true;
-    document.getElementById("f").disabled = true;
     document.getElementById("%").disabled = true;
-    document.getElementById(".").disabled = true;
-    document.getElementById("1/x").disabled = false;
-    document.getElementById("sqrt").disabled = false;
+    document.getElementById(".").disabled = false;
+    document.getElementById("!").disabled = true;
+    document.getElementById("1/x").disabled = true;
+    document.getElementById("sqrt").disabled = true;
     calc = 1;
 
 }
@@ -37,7 +31,6 @@ function setOctal() {
     document.getElementById("binary").classList.remove("selectedButton");
     document.getElementById("octal").classList.add("selectedButton");
     document.getElementById("decimal").classList.remove("selectedButton");
-    document.getElementById("hex").classList.remove("selectedButton");
     document.getElementById("0").disabled = false;
     document.getElementById("1").disabled = false;
     document.getElementById("2").disabled = false;
@@ -48,14 +41,9 @@ function setOctal() {
     document.getElementById("7").disabled = false;
     document.getElementById("8").disabled = true;
     document.getElementById("9").disabled = true;
-    document.getElementById("a").disabled = true;
-    document.getElementById("b").disabled = true;
-    document.getElementById("c").disabled = true;
-    document.getElementById("d").disabled = true;
-    document.getElementById("e").disabled = true;
-    document.getElementById("f").disabled = true;
     document.getElementById("%").disabled = true;
     document.getElementById(".").disabled = true;
+     document.getElementById("!").disabled = true;
     document.getElementById("1/x").disabled = true;
     document.getElementById("sqrt").disabled = true;
     calc = 2;
@@ -65,7 +53,6 @@ function setDecimal() {
     document.getElementById("binary").classList.remove("selectedButton");
     document.getElementById("octal").classList.remove("selectedButton");
     document.getElementById("decimal").classList.add("selectedButton");
-    document.getElementById("hex").classList.remove("selectedButton");
     document.getElementById("0").disabled = false;
     document.getElementById("1").disabled = false;
     document.getElementById("2").disabled = false;
@@ -76,45 +63,12 @@ function setDecimal() {
     document.getElementById("7").disabled = false;
     document.getElementById("8").disabled = false;
     document.getElementById("9").disabled = false;
-    document.getElementById("a").disabled = true;
-    document.getElementById("b").disabled = true;
-    document.getElementById("c").disabled = true;
-    document.getElementById("d").disabled = true;
-    document.getElementById("e").disabled = true;
-    document.getElementById("f").disabled = true;
     document.getElementById("%").disabled = false;
     document.getElementById(".").disabled = false;
+    document.getElementById("!").disabled = false;
     document.getElementById("1/x").disabled = false;
     document.getElementById("sqrt").disabled = false;
     calc = 3;
-}
-
-function setHex() {
-    document.getElementById("binary").classList.remove("selectedButton");
-    document.getElementById("octal").classList.remove("selectedButton");
-    document.getElementById("decimal").classList.remove("selectedButton");
-    document.getElementById("hex").classList.add("selectedButton");
-    document.getElementById("0").disabled = false;
-    document.getElementById("1").disabled = false;
-    document.getElementById("2").disabled = false;
-    document.getElementById("3").disabled = false;
-    document.getElementById("4").disabled = false;
-    document.getElementById("5").disabled = false;
-    document.getElementById("6").disabled = false;
-    document.getElementById("7").disabled = false;
-    document.getElementById("8").disabled = false;
-    document.getElementById("9").disabled = false;
-    document.getElementById("a").disabled = false;
-    document.getElementById("b").disabled = false;
-    document.getElementById("c").disabled = false;
-    document.getElementById("d").disabled = false;
-    document.getElementById("e").disabled = false;
-    document.getElementById("f").disabled = false;
-    document.getElementById("%").disabled = true;
-    document.getElementById(".").disabled = true;
-    document.getElementById("1/x").disabled = true;
-    document.getElementById("sqrt").disabled = true;
-    calc = 4;
 }
 
 function displayCurrentInput() {
@@ -172,8 +126,6 @@ function calculate() {
             current_input = (eval(parseInt(memory, 8)) * eval(parseInt(current_input, 8))).toString(8);
         } else if (calc == 3) {
             current_input = eval(memory) * eval(current_input);
-        } else if (calc == 4) {
-            current_input = (eval(parseInt(memory, 16)) * eval(parseInt(current_input, 16))).toString(16);
         } else {
             current_input = "Please select a calculator type";
         }
@@ -187,8 +139,6 @@ function calculate() {
             current_input = (eval(parseInt(memory, 8)) / eval(parseInt(current_input, 8))).toString(8);
         } else if (calc == 3) {
             current_input = eval(memory) / eval(current_input);
-        } else if (calc == 4) {
-            current_input = (eval(parseInt(memory, 16)) / eval(parseInt(current_input, 16))).toString(16);
         } else {
             current_input = "Please select a calculator type";
         }
@@ -200,8 +150,6 @@ function calculate() {
             current_input = (eval(parseInt(memory, 8)) + eval(parseInt(current_input, 8))).toString(8);
         } else if (calc == 3) {
             current_input = eval(memory) + eval(current_input);
-        } else if (calc == 4) {
-            current_input = (eval(parseInt(memory, 16)) + eval(parseInt(current_input, 16))).toString(16);
         } else {
             current_input = "Please select a calculator type";
         }
@@ -213,8 +161,6 @@ function calculate() {
             current_input = (eval(parseInt(memory, 8)) - eval(parseInt(current_input, 8))).toString(8);
         } else if (calc == 3) {
             current_input = eval(memory) - eval(current_input);
-        } else if (calc == 4) {
-            current_input = (eval(parseInt(memory, 16)) - eval(parseInt(current_input, 16))).toString(16);
         } else {
             current_input = "Please select a calculator type";
         }
@@ -226,8 +172,6 @@ function calculate() {
             current_input = (Math.pow(parseInt(memory, 8), parseInt(current_input, 8))).toString(8);
         } else if (calc == 3) {
             current_input = Math.pow(memory, current_input);
-        } else if (calc == 4) {
-            current_input = (Math.pow(parseInt(memory, 16), parseInt(current_input, 16))).toString(16);
         } else {
             current_input = "Please select a calculator type";
         }
@@ -253,7 +197,15 @@ function percentage() {
 }
 
 function square() {
-    current_input = current_input * current_input;
+    if (calc == 1) {
+        current_input = (eval(parseInt(current_input, 2)) * eval(parseInt(current_input, 2))).toString(2);
+    } else if (calc == 2) {
+        current_input = (eval(parseInt(current_input, 8)) * eval(parseInt(current_input, 8))).toString(8);
+    } else if (calc == 3) {
+        current_input = current_input * current_input;
+    } else {
+        current_input = "Please select a calculator type";
+    }
     displayCurrentInput();
 }
 
@@ -264,5 +216,18 @@ function squareRoot() {
 
 function inverse() {
     current_input = 1 / current_input;
+    displayCurrentInput();
+}
+
+function factorial() {
+    if (current_input == 0) {
+        current_input = 1;
+    }
+    if (current_input < 0) {
+        current_input = "ERROR: Input must be >0";
+    }
+    for (var i = current_input; --i; ) {
+        current_input = current_input * i;
+    }
     displayCurrentInput();
 }

@@ -13,26 +13,18 @@
     <h1 id="header">Calculator App</h1>
     <form>
         <p>
-            <input type="text" id="screen" maxlength="10">
+            <input readonly type="text" id="screen">
         </p>
         <p>
             <button type="button" class="headerButton" id="binary" onclick="setBinary()">Binary</button>
             <button type="button" class="headerButton" id="octal" onclick="setOctal()">Octal</button>
             <button type="button" class="headerButton" id="decimal" onclick="setDecimal()">Decimal</button>
-            <button type="button" class="headerButton" id="hex" onclick="setHex()">Hex</button>
         </p>
         <p>
             <button type="button" id="AC" onclick="allClear()">AC</button>
-            <button type="button" class="whiteButton" id="d" onclick="addDigit('d')">d</button>
-            <button type="button" class="whiteButton" id="e" onclick="addDigit('e')">e</button>
-            <button type="button" class="whiteButton" id="f" onclick="addDigit('f')">f</button>
-            <button type="button" id="%" onclick="percentage()">%</button>
-        </p>
-        <p>
             <button type="button" id="C" onclick="clearCurrent()">C</button>
-            <button type="button" class="whiteButton" id="a" onclick="addDigit('a')">a</button>
-            <button type="button" class="whiteButton" id="b" onclick="addDigit('b')">b</button>
-            <button type="button" class="whiteButton" id="c" onclick="addDigit('c')">c</button>
+            <button type="button" id="%" onclick="percentage()">%</button>
+            <button type="button" id="!" onclick="factorial()">x!</button>
             <button type="button" id="/" onclick="storeOperator('/')">/</button>
         </p>
         <p>
@@ -43,7 +35,7 @@
             <button type="button" id="*" onclick="storeOperator('*')">*</button>
         </p>
         <p>
-            <button type="button" id="sqr" onclick="square()">x!</button>
+            <button type="button" id="^" onclick="square()">x<sup>2</sup></button>
             <button type="button" class="whiteButton" id="4" onclick="addDigit('4')">4</button>
             <button type="button" class="whiteButton" id="5" onclick="addDigit('5')">5</button>
             <button type="button" class="whiteButton" id="6" onclick="addDigit('6')">6</button>

@@ -43,7 +43,7 @@ function setOctal() {
     document.getElementById("9").disabled = true;
     document.getElementById("%").disabled = true;
     document.getElementById(".").disabled = true;
-     document.getElementById("!").disabled = true;
+    document.getElementById("!").disabled = true;
     document.getElementById("1/x").disabled = true;
     document.getElementById("sqrt").disabled = true;
     calc = 2;

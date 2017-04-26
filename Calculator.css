@@ -47,12 +47,3 @@ button {
 .whiteButton {
     background-color: white;
 }
-
-.redButton {
-    background-color: red;
-}
-
-.disabledButton {
-    opacity: 0.2;
-    cursor: not-allowed;
-}
